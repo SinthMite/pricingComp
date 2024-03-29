@@ -1,0 +1,159 @@
+main{
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px hsla(0, 0%, 64%, 0.2);
+    border-radius: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#pricingDiv h2{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: grey;
+
+}
+#pricingDiv p{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+#pricingDiv p::after{
+    content: '/ month';
+    font-size: 1rem;
+    color: grey;
+    margin-left: 0.5rem;
+}
+#range{
+    width: 80%;
+}
+
+#billing{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#terms{
+        margin: 0rem 1rem;
+
+}
+
+#pricingDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+#submitDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+
+#submitDiv li{
+    list-style: url('./assets/images/icon-check.svg');
+}
+
+  #yearly::after{
+    background-color: hsla(15, 100%, 70%, 0.3);
+    border-radius: 1rem;
+    color: hsl(15, 100%, 50%);
+    font-weight: 500;
+  }
+label{
+    color: grey;
+    font-size: 0.8rem;
+}
+
+#trialButton{
+    border-radius: 2rem;
+    background-color: hsl(227, 35%, 25%);
+    color: hsla(227, 35%, 85%);
+    margin-top: 1rem;
+    margin-left: 2rem ;
+    
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+        -webkit-appearance: none;
+        height: 20px; /* Adjust height of the track */
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 8px; /* Adjust height as needed */
+        -webkit-appearance: none;
+        background-color: hsla(172, 82%, 60%,0.5); /* Adjust color as needed */
+        margin-top: 6px; /* Adjust to center vertically */
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+        width: 50px; /* Adjust width as needed */
+        aspect-ratio: 1;
+        -webkit-appearance: none;
+        cursor: pointer;
+        background: hsla(172, 82%, 45%);
+        border-radius: 50%; /* Make it a circle */
+        margin-top: -20px; /* Adjust to center vertically */
+        box-shadow: 2px 2px 20px hsla(172, 82%, 45%);
+
+    }
+}
+
+#range{
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 425px){
+    #submitDiv{
+        flex-direction: column;
+
+    }
+    #yearly::after{
+    content: '-25%'
+}
+#pricingDiv{
+    display: block;
+}
+#pricingDiv p{
+    display: none;    
+}
+    .mobileValue {
+        font-size: 10rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .mobileValue::after {
+        content: '/ month';
+        font-size: 1rem;
+        color: grey;
+        margin-left: 0.5rem;
+    }
+}
+
+
+@media screen and (min-width: 426px){
+    .mobileValue{
+        display: none;
+    }
+    #submitDiv{
+        flex-direction: row;
+    }
+
+
+    #yearly::after{
+    content: '-25% discount'
+    }
+    
+}
